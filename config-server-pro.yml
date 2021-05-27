@@ -1,0 +1,14 @@
+server:
+  port: 9003
+
+spring:
+  profiles: pro
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://springcloud-tian-eureka:7001/eureka/,http://springcloud-tian-eureka:7002/eureka/,http://springcloud-tian-eureka:7003/eureka/
+      
+      

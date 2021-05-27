@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  
+spring:
+  profiles: pro  
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://springcloud-tian-eureka:7001/eureka/,http://springcloud-tian-eureka:7002/eureka/,http://springcloud-tian-eureka:7003/eureka/
+    
+feign:
+  hystrix:
+    enabled: true #开启服务降级

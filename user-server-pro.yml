@@ -1,0 +1,19 @@
+
+spring:
+  profiles: pro
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://springcloud-tian-mysql:3306/springtest?useUnicode=true&characterEncoding=UTF-8&userSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    service-url:   #这个地址是注册中心整合security 用户名:密码@erueka地址
+      defaultZone: http://springcloud-tian-eureka:7001/eureka/,http://springcloud-tian-eureka:7002/eureka/,http://springcloud-tian-eureka:7003/eureka/
+  instance:
+    prefer-ip-address: true
